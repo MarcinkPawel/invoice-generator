@@ -1,10 +1,11 @@
+import { GlobalStyle } from "./GlobalStyle";
+import { Main } from "./features/Main";
 
-function App() {
+export const App = () => {
   return (
     <div>
-      
+      <GlobalStyle />
+      <Main />
     </div>
   );
-}
-
-export default App;
+};

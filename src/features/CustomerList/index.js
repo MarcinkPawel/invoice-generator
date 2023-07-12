@@ -1,3 +1,5 @@
 export const CustomerList = () => {
-  return <div></div>;
+  return <div>
+    hello
+  </div>;
 };

@@ -21,20 +21,20 @@ export const CustomerFrom = () => {
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    dispatch(
-      addCustomer([{
-        id: nanoid(),
-        firstName: firstNameField,
-        lastName: lastNameField,
-        company: companyField,
-        address: addressField,
-        postCode: postCodeField,
-        nip: nipField,
-        pesel: peselField,
-        bank: bankField,
-        accountNumber: accountNumberField,
-  }])
-    );
+    const newCustomer = {
+      id: nanoid(),
+      firstName: firstNameField,
+      lastName: lastNameField,
+      company: companyField,
+      address: addressField,
+      postCode: postCodeField,
+      nip: nipField,
+      pesel: peselField,
+      bank: bankField,
+      accountNumber: accountNumberField,
+    };
+
+    dispatch(addCustomer(newCustomer));
 
     setFirstNameField("");
     setLastNameField("");
@@ -46,7 +46,6 @@ export const CustomerFrom = () => {
     setBankField("");
     setAccountNumberField("");
   };
-  
 
   return (
     <Container>

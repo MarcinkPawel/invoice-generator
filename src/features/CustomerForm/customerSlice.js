@@ -2,22 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getCustomerFromLocalStorage } from "./customerLocalStorage";
 
 const customerSlice = createSlice({
-  name: "customersData",
+  name: "customerData",
   initialState: {
-    customersData: getCustomerFromLocalStorage()
+    customersData: getCustomerFromLocalStorage() || [],
   },
   reducers: {
-    addCustomer: ({ customersData }, {payload: customer}) => {
-      customersData.push(customer)
-    }
-  }
+    addCustomer: (state, { payload: customer }) => {
+      state.customersData.push(customer);
+    },
+  },
 });
 
 export const { addCustomer } = customerSlice.actions;
 
-const selectCustomersDataState = (state) => state.customersData;
+const selectCustomerDataState = (state) => state.customerData;
 
-export const selectCustomer = (state) => selectCustomersDataState(state).customersData;
-
+export const selectCustomer = (state) =>
+  selectCustomerDataState(state).customersData;
 
 export default customerSlice.reducer;

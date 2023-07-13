@@ -1,6 +1,5 @@
 import { Customer, Data, DataLable, DataEntry } from "./styled";
 
-
 export const CustomerTemplate = ({
   nameFirst,
   nameLast,
@@ -10,7 +9,7 @@ export const CustomerTemplate = ({
   nip,
   pesel,
   bank,
-  numberAccount
+  numberAccount,
 }) => (
   <Customer>
     <Data>

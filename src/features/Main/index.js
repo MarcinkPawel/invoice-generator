@@ -1,11 +1,11 @@
-import { CustomerFrom } from "../CustomerForm"
-import { CustomerList } from "../CustomerList"
+import { CustomerFrom } from "../CustomerForm";
+import { CustomerList } from "../CustomerList";
 
 export const Main = () => {
-    return (
-        <div>
-           <CustomerFrom />
-           <CustomerList />
-        </div>
-    )
-}
+  return (
+    <div>
+      <CustomerFrom />
+      <CustomerList />
+    </div>
+  );
+};

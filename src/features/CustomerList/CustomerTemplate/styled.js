@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Customer = styled.li`
-text-decoration: none;
-
+  text-decoration: none;
 `;
 
 export const Data = styled.label``;

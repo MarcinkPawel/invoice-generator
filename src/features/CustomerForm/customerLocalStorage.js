@@ -8,5 +8,5 @@ export const saveCustomerInLocalStorage = (customers) => {
   }
 };
 
-export const getCustomerFromLocalStorage = () => 
-JSON.parse(localStorage.getItem(localStorageKey)) || [];
+export const getCustomerFromLocalStorage = () =>
+  JSON.parse(localStorage.getItem(localStorageKey)) || [];

@@ -11,7 +11,6 @@ function* saveCustomerInLocalStorageHandler() {
   }
 }
 
-
 export function* customerSaga() {
   yield takeEvery("*", saveCustomerInLocalStorageHandler);
 }

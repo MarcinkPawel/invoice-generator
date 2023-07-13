@@ -1,5 +1,12 @@
+import { Container } from "../../common/Section";
+
 export const CustomerList = () => {
-  return <div>
-    hello
-  </div>;
+  return (
+  
+  <Container> 
+    <legend>Customer list</legend>
+
+  </Container>
+
+  );
 };

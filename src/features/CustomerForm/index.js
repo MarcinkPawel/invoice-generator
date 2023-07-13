@@ -22,7 +22,7 @@ export const CustomerFrom = () => {
     event.preventDefault();
 
     dispatch(
-      addCustomer({
+      addCustomer([{
         id: nanoid(),
         firstName: firstNameField,
         lastName: lastNameField,
@@ -33,7 +33,7 @@ export const CustomerFrom = () => {
         pesel: peselField,
         bank: bankField,
         accountNumber: accountNumberField,
-      })
+  }])
     );
 
     setFirstNameField("");

@@ -1,4 +1,4 @@
-const localStorageKey = "customer";
+const localStorageKey = "invoiceCustomers";
 
 export const saveCustomerInLocalStorage = (customers) => {
   try {

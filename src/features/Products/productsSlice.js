@@ -17,8 +17,6 @@ export const { addProduct } = productsSlice.actions;
 
 const selectProductsState = (state) => state.productsData;
 
-export const selectProducts = (state) =>
-  selectProductsState(state).products;
-
+export const selectProducts = (state) => selectProductsState(state).products;
 
 export default productsSlice.reducer;

@@ -3,6 +3,7 @@ import { Container } from "../../common/Section";
 import { useDispatch } from "react-redux";
 import { addProduct } from "./productsSlice";
 import { LabelText } from "../CustomerForm/styled";
+import { nanoid } from "@reduxjs/toolkit";
 
 export const Products = () => {
   const [products, setProducts] = useState({
@@ -17,7 +18,16 @@ export const Products = () => {
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    dispatch(addProduct(products));
+    const newProduct = {
+      productName: products.productName,
+      net: products.net,
+      gross: products.gross,
+      vat: products.vat,
+      amount: products.amount,
+      id: nanoid(),
+    };
+
+    dispatch(addProduct(newProduct));
 
     setProducts({
       productName: "",
@@ -25,6 +35,7 @@ export const Products = () => {
       gross: "",
       vat: "",
       amount: "",
+      id: "",
     });
   };
 

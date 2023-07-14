@@ -23,7 +23,7 @@ export const ProductsList = () => {
         </thead>
         <tbody>
           {products.map((product) => (
-            <tr>
+            <tr key={product.id}>
               <td>{product.productName}</td>
               <td>{product.net}</td>
               <td>{product.gross}</td>

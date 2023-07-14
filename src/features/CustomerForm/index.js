@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addCustomer } from "./customerSlice";
-import { Container } from "../../common/Section";
-import { Fieldset, Label, LabelText, FormInput } from "./styled";
+import { Wrapper, Fieldset, Label, LabelText, FormInput } from "./styled";
 import { useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
 
@@ -61,7 +60,7 @@ export const CustomerFrom = () => {
   }
 
   return (
-    <Container>
+    <Wrapper>
       <legend>Add/Edit Customer</legend>
       <form onSubmit={onFormSubmit}>
         <Fieldset>
@@ -162,6 +161,6 @@ export const CustomerFrom = () => {
         </Fieldset>
         <button type="submit">Add/Edit Customer</button>
       </form>
-    </Container>
+    </Wrapper>
   );
 };

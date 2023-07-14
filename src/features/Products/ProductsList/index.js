@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
-import { Container } from "../../../common/Section";
+import { Wrapper } from "./styled";
 import { selectProducts } from "../productsSlice";
 
 export const ProductsList = () => {
   const products = useSelector(selectProducts);
 
   return (
-    <Container>
+    <Wrapper>
       <table>
         <thead>
           <tr>
@@ -32,6 +32,6 @@ export const ProductsList = () => {
           ))}
         </tbody>
       </table>
-    </Container>
+    </Wrapper>
   );
 };

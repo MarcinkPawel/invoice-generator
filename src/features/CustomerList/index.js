@@ -1,4 +1,4 @@
-import { Container } from "../../common/Section";
+import { Wrapper } from "./styled";
 import { useSelector } from "react-redux";
 import { selectCustomer } from "../CustomerForm/customerSlice";
 import { CustomerTemplate } from "./CustomerTemplate";
@@ -10,7 +10,7 @@ export const CustomerList = () => {
   console.log(customers.map((customer) => customer.firstName));
 
   return (
-    <Container>
+    <Wrapper>
       <legend>Customers list</legend>
       <List>
         {customers.map((customer) => (
@@ -28,6 +28,6 @@ export const CustomerList = () => {
           />
         ))}
       </List>
-    </Container>
+    </Wrapper>
   );
 };

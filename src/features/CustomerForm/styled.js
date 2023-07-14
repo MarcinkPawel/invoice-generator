@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { Container } from "../../common/Section";
+
+export const Wrapper = styled(Container)`
+  grid-area: 1 / 1 / 2 / 2;
+`;
 
 export const Fieldset = styled.fieldset`
   margin-bottom: 10px;

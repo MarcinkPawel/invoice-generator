@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container } from "../../common/Section";
+import { Wrapper } from "./styled";
 import { useDispatch } from "react-redux";
 import { addProduct } from "./productsSlice";
 import { LabelText } from "../CustomerForm/styled";
@@ -48,7 +48,7 @@ export const Products = () => {
   }
 
   return (
-    <Container>
+    <Wrapper>
       <legend>Products</legend>
       <form onSubmit={onFormSubmit}>
         <label>
@@ -98,6 +98,6 @@ export const Products = () => {
         </label>
         <button type="submit">Add product</button>
       </form>
-    </Container>
+    </Wrapper>
   );
 };

@@ -6,15 +6,17 @@ import { useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
 
 export const CustomerFrom = () => {
-  const [firstNameField, setFirstNameField] = useState("");
-  const [lastNameField, setLastNameField] = useState("");
-  const [companyField, setCompanyField] = useState("");
-  const [addressField, setAddressField] = useState("");
-  const [postCodeField, setPostCodeField] = useState("");
-  const [nipField, setNipField] = useState("");
-  const [peselField, setPeselField] = useState("");
-  const [bankField, setBankField] = useState("");
-  const [accountNumberField, setAccountNumberField] = useState("");
+  const [customer, setCustomer] = useState({
+    firstName: "",
+    lastName: "",
+    company: "",
+    address: "",
+    postCode: "",
+    nip: "",
+    pesel: "",
+    bank: "",
+    accountNumber: "",
+  });
 
   const dispatch = useDispatch();
 
@@ -23,29 +25,40 @@ export const CustomerFrom = () => {
 
     const newCustomer = {
       id: nanoid(),
-      firstName: firstNameField,
-      lastName: lastNameField,
-      company: companyField,
-      address: addressField,
-      postCode: postCodeField,
-      nip: nipField,
-      pesel: peselField,
-      bank: bankField,
-      accountNumber: accountNumberField,
+      firstName: customer.firstName,
+      lastName: customer.lastName,
+      company: customer.company,
+      address: customer.address,
+      postCode: customer.postCode,
+      nip: customer.nip,
+      pesel: customer.pesel,
+      bank: customer.bank,
+      accountNumber: customer.accountNumber,
     };
 
     dispatch(addCustomer(newCustomer));
 
-    setFirstNameField("");
-    setLastNameField("");
-    setCompanyField("");
-    setAddressField("");
-    setPostCodeField("");
-    setNipField("");
-    setPeselField("");
-    setBankField("");
-    setAccountNumberField("");
+    setCustomer({
+      firstName: "",
+      lastName: "",
+      company: "",
+      address: "",
+      postCode: "",
+      nip: "",
+      pesel: "",
+      bank: "",
+      accountNumber: "",
+      id: "",
+    });
   };
+
+  function handleChange(event) {
+    const value = event.target.value;
+    setCustomer({
+      ...customer,
+      [event.target.name]: value,
+    });
+  }
 
   return (
     <Container>
@@ -58,8 +71,8 @@ export const CustomerFrom = () => {
             <FormInput
               type="text"
               name="firstName"
-              value={firstNameField}
-              onChange={(event) => setFirstNameField(event.target.value)}
+              value={customer.firstName}
+              onChange={handleChange}
               required
             />
           </Label>
@@ -68,8 +81,8 @@ export const CustomerFrom = () => {
             <FormInput
               type="text"
               name="lastName"
-              value={lastNameField}
-              onChange={(event) => setLastNameField(event.target.value)}
+              value={customer.lastName}
+              onChange={handleChange}
               required
             />
           </Label>
@@ -78,8 +91,8 @@ export const CustomerFrom = () => {
             <FormInput
               type="text"
               name="company"
-              value={companyField}
-              onChange={(event) => setCompanyField(event.target.value)}
+              value={customer.company}
+              onChange={handleChange}
             />
           </Label>
           <Label htmlFor="address">
@@ -87,8 +100,8 @@ export const CustomerFrom = () => {
             <FormInput
               type="text"
               name="address"
-              value={addressField}
-              onChange={(event) => setAddressField(event.target.value)}
+              value={customer.address}
+              onChange={handleChange}
               required
             />
           </Label>
@@ -98,8 +111,8 @@ export const CustomerFrom = () => {
               type="text"
               name="postCode"
               pattern="[0-9]{2}-[0-9]{3}"
-              value={postCodeField}
-              onChange={(event) => setPostCodeField(event.target.value)}
+              value={customer.postCode}
+              onChange={handleChange}
               required
             />
           </Label>
@@ -109,8 +122,8 @@ export const CustomerFrom = () => {
               type="number"
               name="nip"
               pattern="[0-9]{10}}"
-              value={nipField}
-              onChange={(event) => setNipField(event.target.value)}
+              value={customer.nip}
+              onChange={handleChange}
               required
             />
           </Label>
@@ -120,8 +133,8 @@ export const CustomerFrom = () => {
               type="number"
               name="pesel"
               pattern="[0-9]{11}}"
-              value={peselField}
-              onChange={(event) => setPeselField(event.target.value)}
+              value={customer.pesel}
+              onChange={handleChange}
               required
             />
           </Label>
@@ -133,8 +146,8 @@ export const CustomerFrom = () => {
             <FormInput
               type="text"
               name="bank"
-              value={bankField}
-              onChange={(event) => setBankField(event.target.value)}
+              value={customer.bank}
+              onChange={handleChange}
             />
           </Label>
           <Label htmlFor="accountNumber">
@@ -142,8 +155,8 @@ export const CustomerFrom = () => {
             <FormInput
               type="number"
               name="accountNumber"
-              value={accountNumberField}
-              onChange={(event) => setAccountNumberField(event.target.value)}
+              value={customer.accountNumber}
+              onChange={handleChange}
             />
           </Label>
         </Fieldset>

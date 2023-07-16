@@ -13,39 +13,39 @@ export const CustomerTemplate = ({
 }) => (
   <Customer>
     <Data>
-      <DataLable>First name:</DataLable>
+      <DataLable>First name</DataLable>
       <DataEntry>{nameFirst}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Last name:</DataLable>
+      <DataLable>Last name</DataLable>
       <DataEntry>{nameLast}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Company's name:</DataLable>
+      <DataLable>Company's name</DataLable>
       <DataEntry>{nameCompany}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Address:</DataLable>
+      <DataLable>Address</DataLable>
       <DataEntry>{address}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Post code:</DataLable>
+      <DataLable>Post code</DataLable>
       <DataEntry>{codePost}</DataEntry>
     </Data>
     <Data>
-      <DataLable>NIP:</DataLable>
+      <DataLable>NIP</DataLable>
       <DataEntry>{nip}</DataEntry>
     </Data>
     <Data>
-      <DataLable>PESEL:</DataLable>
+      <DataLable>PESEL</DataLable>
       <DataEntry>{pesel}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Bank:</DataLable>
+      <DataLable>Bank</DataLable>
       <DataEntry>{bank}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Account number:</DataLable>
+      <DataLable>Account number</DataLable>
       <DataEntry>{numberAccount}</DataEntry>
     </Data>
   </Customer>

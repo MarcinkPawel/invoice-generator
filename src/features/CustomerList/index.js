@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { selectCustomer } from "../CustomerForm/customerSlice";
 import { CustomerTemplate } from "./CustomerTemplate";
 import { List } from "./styled";
+import { Heading } from "../../common/Heading";
 
 export const CustomerList = () => {
   const customers = useSelector(selectCustomer);
@@ -11,7 +12,7 @@ export const CustomerList = () => {
 
   return (
     <Wrapper>
-      <legend>Customers list</legend>
+      <Heading>Customers list</Heading>
       <List>
         {customers.map((customer) => (
           <CustomerTemplate

@@ -1,19 +1,16 @@
 import { useSelector } from "react-redux";
 import { Wrapper } from "./styled";
 import { selectProducts } from "../productsSlice";
+import { Heading } from "../../../common/Heading";
 
 export const ProductsList = () => {
   const products = useSelector(selectProducts);
 
   return (
     <Wrapper>
+      <Heading>Products list</Heading>
       <table>
         <thead>
-          <tr>
-            <th colSpan="4" scope="row">
-              Products list
-            </th>
-          </tr>
           <tr>
             <th>Product Name</th>
             <th>Net price</th>

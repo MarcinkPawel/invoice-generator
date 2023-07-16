@@ -13,11 +13,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Nunito', sans-serif;
         font-style: normal;
         word-break: break-word;
         letter-spacing: 0.05em;
-        background: white;
-        color: black;
+        background: #fafdfb;
+        color: #5a5c69;
     }
 `;

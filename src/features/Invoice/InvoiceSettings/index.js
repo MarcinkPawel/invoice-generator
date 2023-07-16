@@ -3,6 +3,9 @@ import { addInvoice } from "../invoiceSlice";
 import { useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
 import { Wrapper } from "./styled";
+import { Heading } from "../../../common/Heading";
+import { Fieldset, FormInput, Label, LabelText } from "../../../common/Form";
+import { Button } from "../../../common/Button";
 
 export const InvoiceSettings = () => {
   const [invoiceSettings, setInvoiceSettings] = useState({
@@ -48,29 +51,29 @@ export const InvoiceSettings = () => {
 
   return (
     <Wrapper>
-      <legend>Invoice settings</legend>
+      <Heading>Invoice settings</Heading>
       <form onSubmit={onFormSubmit}>
-        <fieldset>
-          <label>
-            <span>Invoice number</span>
-            <input
+        <Fieldset>
+          <Label>
+            <LabelText>Invoice number</LabelText>
+            <FormInput
               type="text"
               name="invoiceNumber"
               value={invoiceSettings.invoiceNumber}
               onChange={handleChange}
             />
-          </label>
-          <label>
-            <span>Date</span>
-            <input
+          </Label>
+          <Label>
+            <LabelText>Date</LabelText>
+            <FormInput
               type="date"
               name="date"
               value={invoiceSettings.date}
               onChange={handleChange}
             />
-          </label>
-          <label>
-            <span>Payment method</span>
+          </Label>
+          <Label>
+            <LabelText>Payment method</LabelText>
             <select
               name="paymentMethod"
               value={invoiceSettings.paymentMethod}
@@ -79,19 +82,19 @@ export const InvoiceSettings = () => {
               <option value="cash">Cash</option>
               <option value="bankTransfer">Bank transfer</option>
             </select>
-          </label>
-          <label>
-            <span>Payment period (days)</span>
-            <input
+          </Label>
+          <Label>
+            <LabelText>Payment period (days)</LabelText>
+            <FormInput
               type="number"
               name="paymentPeriod"
               value={invoiceSettings.paymentPeriod}
               onChange={handleChange}
             />
-          </label>
-          <label>
-            <span>Comment</span>
-            <input
+          </Label>
+          <Label>
+            <LabelText>Comment</LabelText>
+            <FormInput
               type="textarea"
               rows="4"
               cols="50"
@@ -99,9 +102,9 @@ export const InvoiceSettings = () => {
               value={invoiceSettings.comment}
               onChange={handleChange}
             />
-          </label>
-        </fieldset>
-        <button type="submit">Accept settings</button>
+          </Label>
+        </Fieldset>
+        <Button type="submit">Accept settings</Button>
       </form>
     </Wrapper>
   );

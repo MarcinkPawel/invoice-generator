@@ -1,8 +1,11 @@
 import { useDispatch } from "react-redux";
 import { addCustomer } from "./customerSlice";
-import { Wrapper, Fieldset, Label, LabelText, FormInput } from "./styled";
+import { Wrapper } from "./styled";
+import { Fieldset, Label, LabelText, FormInput } from "../../common/Form";
 import { useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
+import { Heading } from "../../common/Heading";
+import { Button } from "../../common/Button";
 
 export const CustomerFrom = () => {
   const [customer, setCustomer] = useState({
@@ -61,10 +64,10 @@ export const CustomerFrom = () => {
 
   return (
     <Wrapper>
-      <legend>Add/Edit Customer</legend>
+      <Heading>Add/Edit Customer</Heading>
       <form onSubmit={onFormSubmit}>
         <Fieldset>
-          <legend>Personal Info</legend>
+          <Heading>Personal Info</Heading>
           <Label htmlFor="firstName">
             <LabelText>First name</LabelText>
             <FormInput
@@ -139,7 +142,7 @@ export const CustomerFrom = () => {
           </Label>
         </Fieldset>
         <Fieldset>
-          <legend>Bank info</legend>
+          <Heading>Banking info</Heading>
           <Label htmlFor="bank">
             <LabelText>Bank</LabelText>
             <FormInput
@@ -159,7 +162,7 @@ export const CustomerFrom = () => {
             />
           </Label>
         </Fieldset>
-        <button type="submit">Add/Edit Customer</button>
+        <Button type="submit">Add/Edit Customer</Button>
       </form>
     </Wrapper>
   );

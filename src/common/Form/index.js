@@ -1,25 +1,29 @@
 import styled from "styled-components";
-import { Container } from "../../common/Section";
-
-export const Wrapper = styled(Container)`
-  grid-area: 1 / 1 / 2 / 2;
-  border: none;
-`;
 
 export const Fieldset = styled.fieldset`
   margin-bottom: 10px;
   padding: 10px;
-  border: none
+  border: none;
 `;
+
 export const Label = styled.label`
-  display: block;
-  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 `;
+
 export const LabelText = styled.span`
-  display: inline-block;
+font-size: 14px;
   width: 150px;
 `;
+
 export const FormInput = styled.input`
-  display: inline-block;
+border: 1px solid #d1d3e2;
+border-radius: 3px;
+padding: 5px;
   width: auto;
+
+&:focus {
+    outline: 1px solid #6777ef;
+}
 `;

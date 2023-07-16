@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Wrapper } from "./styled";
 import { useDispatch } from "react-redux";
 import { addProduct } from "./productsSlice";
-import { LabelText } from "../CustomerForm/styled";
 import { nanoid } from "@reduxjs/toolkit";
+import { Heading } from "../../common/Heading";
+import { FormInput, Label, LabelText } from "../../common/Form";
+import { Button } from "../../common/Button";
 
 export const Products = () => {
   const [products, setProducts] = useState({
@@ -49,54 +51,54 @@ export const Products = () => {
 
   return (
     <Wrapper>
-      <legend>Products</legend>
+      <Heading>Products</Heading>
       <form onSubmit={onFormSubmit}>
-        <label>
+        <Label>
           <LabelText>Product name</LabelText>
-          <input
+          <FormInput
             type="text"
             name="productName"
             value={products.productName}
             onChange={handleChange}
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           <LabelText>Net price</LabelText>
-          <input
+          <FormInput
             type="value"
             name="net"
             value={products.net}
             onChange={handleChange}
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           <LabelText>Gross price</LabelText>
-          <input
+          <FormInput
             type="number"
             name="gross"
             value={products.gross}
             onChange={handleChange}
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           <LabelText>Vat rate ()</LabelText>
-          <input
+          <FormInput
             type="number"
             name="vat"
             value={products.vat}
             onChange={handleChange}
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           <LabelText>Amount</LabelText>
-          <input
+          <FormInput
             type="number"
             name="amount"
             value={products.amount}
             onChange={handleChange}
           />
-        </label>
-        <button type="submit">Add product</button>
+        </Label>
+        <Button type="submit">Add product</Button>
       </form>
     </Wrapper>
   );

@@ -1,4 +1,4 @@
-import { Customer, Data, DataLable, DataEntry } from "./styled";
+import { Customer, Data, DataLabel, DataEntry } from "./styled";
 
 export const CustomerTemplate = ({
   nameFirst,
@@ -8,45 +8,35 @@ export const CustomerTemplate = ({
   codePost,
   nip,
   pesel,
-  bank,
-  numberAccount,
 }) => (
   <Customer>
     <Data>
-      <DataLable>First name</DataLable>
+      <DataLabel>First name</DataLabel>
       <DataEntry>{nameFirst}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Last name</DataLable>
+      <DataLabel>Last name</DataLabel>
       <DataEntry>{nameLast}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Company's name</DataLable>
+      <DataLabel>Company's name</DataLabel>
       <DataEntry>{nameCompany}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Address</DataLable>
+      <DataLabel>Address</DataLabel>
       <DataEntry>{address}</DataEntry>
     </Data>
     <Data>
-      <DataLable>Post code</DataLable>
+      <DataLabel>Post code</DataLabel>
       <DataEntry>{codePost}</DataEntry>
     </Data>
     <Data>
-      <DataLable>NIP</DataLable>
+      <DataLabel>NIP</DataLabel>
       <DataEntry>{nip}</DataEntry>
     </Data>
     <Data>
-      <DataLable>PESEL</DataLable>
+      <DataLabel>PESEL</DataLabel>
       <DataEntry>{pesel}</DataEntry>
-    </Data>
-    <Data>
-      <DataLable>Bank</DataLable>
-      <DataEntry>{bank}</DataEntry>
-    </Data>
-    <Data>
-      <DataLable>Account number</DataLable>
-      <DataEntry>{numberAccount}</DataEntry>
     </Data>
   </Customer>
 );

@@ -24,8 +24,6 @@ export const CustomerList = () => {
             codePost={customer.postCode}
             nip={customer.nip}
             pesel={customer.pesel}
-            bank={customer.bank}
-            numberAccount={customer.accountNumber}
           />
         ))}
       </List>

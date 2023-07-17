@@ -16,8 +16,6 @@ export const CustomerFrom = () => {
     postCode: "",
     nip: "",
     pesel: "",
-    bank: "",
-    accountNumber: "",
   });
 
   const dispatch = useDispatch();
@@ -34,8 +32,6 @@ export const CustomerFrom = () => {
       postCode: customer.postCode,
       nip: customer.nip,
       pesel: customer.pesel,
-      bank: customer.bank,
-      accountNumber: customer.accountNumber,
     };
 
     dispatch(addCustomer(newCustomer));
@@ -48,8 +44,6 @@ export const CustomerFrom = () => {
       postCode: "",
       nip: "",
       pesel: "",
-      bank: "",
-      accountNumber: "",
       id: "",
     });
   };
@@ -138,27 +132,6 @@ export const CustomerFrom = () => {
               value={customer.pesel}
               onChange={handleChange}
               required
-            />
-          </Label>
-        </Fieldset>
-        <Fieldset>
-          <Heading>Banking info</Heading>
-          <Label htmlFor="bank">
-            <LabelText>Bank</LabelText>
-            <FormInput
-              type="text"
-              name="bank"
-              value={customer.bank}
-              onChange={handleChange}
-            />
-          </Label>
-          <Label htmlFor="accountNumber">
-            <LabelText>Account number</LabelText>
-            <FormInput
-              type="number"
-              name="accountNumber"
-              value={customer.accountNumber}
-              onChange={handleChange}
             />
           </Label>
         </Fieldset>

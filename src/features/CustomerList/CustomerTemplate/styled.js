@@ -18,11 +18,12 @@ export const Data = styled.label`
   margin-bottom: 5px;
 `;
 
-export const DataLable = styled.p`
+export const DataLabel = styled.p`
 font-size: 10px;
 color: #b7b9cc;
 font-weight: 800;
 text-transform: uppercase;
+padding-right: 8px;
 `;
 
 export const DataEntry = styled.span`

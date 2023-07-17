@@ -13,17 +13,17 @@ export const Label = styled.label`
 `;
 
 export const LabelText = styled.span`
-font-size: 14px;
+  font-size: 14px;
   width: 150px;
 `;
 
 export const FormInput = styled.input`
-border: 1px solid #d1d3e2;
-border-radius: 3px;
-padding: 5px;
+  border: 1px solid #d1d3e2;
+  border-radius: 3px;
+  padding: 5px;
   width: auto;
 
-&:focus {
+  &:focus {
     outline: 1px solid #6777ef;
-}
+  }
 `;

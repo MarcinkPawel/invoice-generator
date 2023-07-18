@@ -31,3 +31,11 @@ export const DataEntry = styled.span`
   font-size: 12px;
 
 `;
+
+export const Select = styled.button`
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #3abaf4;
+  border-radius: 3px;
+`;

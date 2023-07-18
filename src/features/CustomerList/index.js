@@ -6,9 +6,10 @@ import { List } from "./styled";
 import { Heading } from "../../common/Heading";
 
 export const CustomerList = () => {
+  
   const customers = useSelector(selectCustomer);
 
-  console.log(customers.map((customer) => customer.firstName));
+
 
   return (
     <Wrapper>

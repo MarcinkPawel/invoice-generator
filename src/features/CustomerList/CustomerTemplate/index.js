@@ -1,9 +1,10 @@
 import { toggleCustomerSelected } from "../../CustomerForm/customerSlice";
 import { Customer, Data, DataLabel, DataEntry, Select } from "./styled";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { getCustomerById } from "../../CustomerForm/customerSlice";
 
 export const CustomerTemplate = ({
-  customer,
   nameFirst,
   nameLast,
   nameCompany,
@@ -12,6 +13,11 @@ export const CustomerTemplate = ({
   nip,
   pesel,
 }) => {
+
+  const { id } = useParams();
+  const customer = useSelector((state) => getCustomerById(state, id));
+
+
   const dispatch = useDispatch();
   return (
     <Customer>
